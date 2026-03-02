@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Digital Marketing Dashboard</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Remix Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+  <link rel="stylesheet" href="./css/dashboard.css">
+</head>
+
+<body>
+
+<div class="dashboard">
+
+  <!-- SIDEBAR -->
+  <div class="sidebar">
+    <div class="logo">
+      <i class="ri-bar-chart-grouped-line"></i>
+      <span>STACKLY</span>
+    </div>
+
+    <ul class="menu">
+      <li class="active"><i class="ri-dashboard-line"></i> Overview</li>
+      <li><i class="ri-file-chart-line"></i> Reports</li>
+      <li><i class="ri-user-line"></i> Leads</li>
+      <li><i class="ri-money-dollar-circle-line"></i> Revenue</li>
+      <li><i class="ri-megaphone-line"></i> Marketing</li>
+    </ul>
+<!-- DIGITAL MARKETING PERFORMANCE CARD -->
+<div class="marketing-metric-card">
+
+  <div class="metric-header">
+    <h4>Campaign Overview</h4>
+    <i class="ri-arrow-right-s-line"></i>
+  </div>
+
+  <p class="metric-sub">Overall Marketing Insights</p>
+
+  <!-- Profile Image -->
+  <div class="metric-avatar">
+    <img src="https://i.pravatar.cc/120?img=32" alt="Marketing Manager">
+  </div>
+
+  <!-- KPI Indicator -->
+  <div class="metric-rating">
+    <span>CTR</span>
+    <div class="rating-bar">
+      <div class="rating-fill"></div>
+    </div>
+    <span>8.4%</span>
+  </div>
+
+  <!-- Bottom Stats -->
+  <div class="metric-stats">
+    <div>
+      <p>Ad Spend</p>
+      <h5>₹1.8L</h5>
+    </div>
+    <div>
+      <p>ROAS</p>
+      <h5>4.5x</h5>
+    </div>
+  </div>
+
+</div>
+  </div>
+
+
+  <!-- MAIN CONTENT -->
+  <div class="main">
+
+    <!-- TOPBAR -->
+    <div class="topbar">
+      <h2>Dashboard</h2>
+
+      <div class="top-actions">
+
+        <!-- SEARCH -->
+        <div class="search-box">
+          <form id="searchForm">
+            <input type="text" id="searchInput" placeholder="Search..." required>
+            <button type="submit">
+              <i class="ri-search-line"></i>
+            </button>
+          </form>
+        </div>
+
+        <!-- NOTIFICATION -->
+        <div class="notification">
+          <i class="ri-notification-3-line" id="bellIcon"></i>
+          <span class="badge">3</span>
+        </div>
+
+        <!-- PROFILE -->
+        <div class="profile">
+          <img src="https://i.pravatar.cc/40" alt="">
+          <span>Manager</span>
+        </div>
+
+      </div>
+    </div>
+
+
+    <!-- ================= FIRST ROW ================= -->
+    <div class="cards">
+
+      <!-- TOTAL SALES -->
+      <div class="card">
+        <div class="card-top">
+          <p>Total Sales</p>
+          <a href="404.html" class="view-btn">View</a>
+        </div>
+        <h1>₹1,20,000</h1>
+        <span class="growth up">+12%</span>
+      </div>
+
+
+      <!-- VISITORS ONLINE -->
+      <div class="card visitor-card">
+        <div class="card-top">
+          <p>Visitors Online</p>
+          <a href="404.html" class="view-btn">View</a>
+        </div>
+        <div class="chart-line"></div>
+      </div>
+
+
+      <!-- MARKET SHARE -->
+      <div class="card">
+        <div class="card-top">
+          <p>Market Share</p>
+          <a href="404.html" class="view-btn">View</a>
+        </div>
+
+        <div class="progress-item">
+          <span>Google Ads</span>
+          <div class="progress-bar">
+            <div class="progress" style="width:70%"></div>
+          </div>
+        </div>
+
+        <div class="progress-item">
+          <span>Instagram</span>
+          <div class="progress-bar">
+            <div class="progress green" style="width:55%"></div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <!-- ================= END FIRST ROW ================= -->
+
+
+    <!-- ================= SECOND ROW ================= -->
+    <div class="cards marketing-row">
+
+      <!-- AD REVENUE -->
+      <div class="card">
+        <div class="card-top">
+          <p>Ad Revenue</p>
+          <select>
+            <option>Weekly</option>
+            <option>Monthly</option>
+          </select>
+        </div>
+
+        <div class="bar-chart">
+          <div class="bar" style="height:40%"></div>
+          <div class="bar" style="height:60%"></div>
+          <div class="bar active" style="height:85%"></div>
+          <div class="bar" style="height:55%"></div>
+          <div class="bar" style="height:70%"></div>
+        </div>
+      </div>
+
+
+      <!-- CAMPAIGN RETENTION -->
+      <div class="card center-card">
+        <div class="card-top">
+          <p>Campaign Retention</p>
+          <select>
+            <option>Weekly</option>
+          </select>
+        </div>
+
+        <div class="semi-circle">
+          <div class="inner-circle">72%</div>
+        </div>
+      </div>
+
+
+      <!-- TOP CHANNELS -->
+      <div class="card center-card">
+        <div class="card-top">
+          <p>Top Channels</p>
+          <select>
+            <option>Weekly</option>
+          </select>
+        </div>
+
+        <div class="donut-chart">
+          <div class="donut-inner">720K</div>
+        </div>
+
+        <div class="legend">
+          <span><i class="dot green"></i> Google Ads</span>
+          <span><i class="dot blue"></i> Instagram</span>
+          <span><i class="dot orange"></i> Facebook</span>
+        </div>
+      </div>
+
+    </div>
+    <!-- ================= END SECOND ROW ================= -->
+
+
+    <!-- ================= THIRD ROW ================= -->
+    <div class="cards marketing-row">
+
+      <!-- WEEKLY CAMPAIGN TASKS -->
+      <div class="card">
+        <div class="card-top">
+          <p>Weekly Campaign Tasks</p>
+          <span class="progress-text">7/10 Completed</span>
+        </div>
+
+        <div class="progress-bar-big">
+          <div class="progress-fill"></div>
+        </div>
+
+        <div class="task-stats">
+          <div>
+            <h2>70%</h2>
+            <p>CTR Growth</p>
+          </div>
+          <div>
+            <h2>32%</h2>
+            <p>Conversion Boost</p>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- CUSTOMER INSIGHTS -->
+      <div class="card customer-metric">
+        <h3>Customer Insights</h3>
+        <div class="avatar"></div>
+        <p>Total Spend</p>
+        <h2>₹92,500</h2>
+        <p>Loyalty Score 70</p>
+      </div>
+
+    </div>
+    <!-- ================= END THIRD ROW ================= -->
+
+
+  </div> <!-- END MAIN -->
+
+</div> <!-- END DASHBOARD -->
+
+
+<script>
+/* SEARCH SUBMIT → REDIRECT */
+document.getElementById("searchForm").addEventListener("submit", function(e){
+  e.preventDefault();
+  window.location.href = "404.html";
+});
+
+/* NOTIFICATION CLICK → REDIRECT */
+document.getElementById("bellIcon").addEventListener("click", function(){
+  window.location.href = "404.html";
+});
+</script>
+
+</body>
+</html>

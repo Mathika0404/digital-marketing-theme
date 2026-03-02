@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Digital Marketing Website</title>
+
+  <!-- GOOGLE FONT -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+
+  <!-- REMIX ICON -->
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+
+<!-- FONT AWESOME -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="./css/style2.css">
+</head>
+<body>
+
+<!-- LOGIN MODAL -->
+<div id="loginModal" class="login-modal">
+
+  <div class="login-box">
+    <span class="close-btn" onclick="closeLogin()">&times;</span>
+
+    <!-- TITLE -->
+    <h2 id="formTitle">Marketing Client Login</h2>
+    <p id="formSubtitle">Access your campaign analytics & performance dashboard</p>
+
+    <form id="authForm" onsubmit="handleAuthSubmit(event)">
+
+      <!-- SIGNUP ONLY FIELD -->
+      <input type="text"
+             id="companyName"
+             placeholder="Agency / Brand Name"
+             style="display:none;">
+
+      <!-- COMMON FIELDS -->
+      <input type="email"
+             placeholder="Business Email Address"
+             required>
+
+      <input type="text"
+             placeholder="Campaign ID / Client Code"
+             required>
+
+      <!-- PASSWORD -->
+      <div class="password-field">
+        <input type="password"
+               id="loginPassword"
+               placeholder="Dashboard Password"
+               required>
+
+        <i class="fa-solid fa-eye-slash toggle-eye"
+           id="eyeIcon"
+           onclick="togglePassword()"></i>
+      </div>
+
+      <!-- SIGNUP ONLY FIELD -->
+      <input type="password"
+             id="confirmPassword"
+             placeholder="Confirm Dashboard Password"
+             style="display:none;">
+
+      <button type="submit"
+              class="login-submit"
+              id="submitBtn">
+        Access Dashboard
+      </button>
+
+    </form>
+
+    <!-- SWITCH LINK -->
+    <p class="switch-text">
+      <span id="switchText">New to our marketing analytics platform?</span>
+      <a href="javascript:void(0)" onclick="toggleAuth()">Create account</a>
+    </p>
+
+  </div>
+
+</div>
+
+<!-- NAVBAR -->
+<header>
+  <nav class="navbar">
+
+    <div class="nav__header">
+      <div class="nav__logo">
+        <a href="index2.html">
+          <img src="./images/stackly_logo.webp" class="logo-img" alt="logo">
+        </a>
+      </div>
+
+      <div class="nav__menu__btn" id="menu-btn">
+        <i class="ri-menu-line"></i>
+      </div>
+    </div>
+
+    <ul class="nav__links" id="nav-links">
+      <li class="dropdown">
+        <a href="index2.html">Home</a>
+        <i class="ri-arrow-down-s-line arrow"></i>
+        <ul class="dropdown-menu">
+          <li><a href="index2.html">Home Page 1</a></li>
+        </ul>
+      </li>
+
+      <li><a href="portfolio.html">Portfolio</a></li>
+      <li><a href="faq.html">FAQs</a></li>
+      <li><a href="contact2.html">Contact</a></li>
+            <li>
+  <a href="javascript:void(0)" onclick="openLogin()" class="login-btn">
+    Login
+  </a>
+</li>
+    </ul>
+
+  </nav>
+</header>
+
+<section class="hero">
+
+  <!-- Background Video -->
+  <video autoplay muted loop playsinline class="hero-video">
+    <source src="./images/home2_video.mp4" type="video/mp4">
+    Your browser does not support video.
+  </video>
+
+  <!-- Overlay -->
+  <div class="hero-overlay"></div>
+
+  <!-- Content -->
+  <div class="hero-content">
+    <h1 class="reveal delay-1">
+      Grow Your <span>Digital Presence</span>
+    </h1>
+
+    <h3 class="reveal delay-2">
+      Data-Driven Digital Marketing Solutions
+    </h3>
+
+    <p class="reveal delay-3">
+      We help brands scale faster with SEO, paid advertising,
+      social media strategy and conversion-focused campaigns.
+    </p>
+  </div>
+
+</section>
+
+<section class="assist-section">
+
+  <div class="assist-container">
+
+    <!-- LEFT CONTENT -->
+    <div class="assist-content">
+      <h2>
+        HOW MAY WE ASSIST<br>
+        YOU <span class="dot"></span>
+      </h2>
+
+      <p>
+        We partner with brands to accelerate growth through data-driven
+        digital marketing solutions. From SEO and performance advertising
+        to social media and conversion optimization, we deliver measurable
+        outcomes that help your business scale with confidence.
+      </p>
+
+      <p>
+        Our 360° digital marketing approach brings strategy, creativity,
+        and technology together under one roof — ensuring every campaign
+        drives real impact and long-term success.
+      </p>
+    </div>
+
+    <!-- RIGHT IMAGE -->
+    <div class="assist-image">
+      <img src="./images/home2_image.png" alt="Digital Marketing">
+    </div>
+
+  </div>
+
+</section>
+
+<section class="pricing-section">
+
+  <!-- HEADER -->
+  <div class="pricing-header">
+    <h2>Choose Your Growth Plan</h2>
+    <p>Unlock measurable digital marketing success</p>
+  </div>
+
+  <!-- PRICING CARDS -->
+  <div class="pricing-cards">
+
+    <!-- STARTER -->
+    <div class="pricing-card">
+      <h3>Starter</h3>
+      <p class="plan-desc">
+        Best for startups & local businesses
+      </p>
+
+      <div class="price">
+        <span>₹</span> 0
+      </div>
+
+      <button class="btn btn-outline">Get Started</button>
+
+      <ul>
+        <li>Website audit & insights</li>
+        <li>Basic SEO setup</li>
+        <li>Social media guidance</li>
+        <li>Monthly report</li>
+      </ul>
+    </div>
+
+    <!-- GROWTH (POPULAR) -->
+    <div class="pricing-card popular">
+      <span class="badge">Popular</span>
+
+      <h3>Growth</h3>
+      <p class="plan-desc">
+        Perfect for scaling brands & SMEs
+      </p>
+
+      <div class="price">
+        <span>₹</span> 9,999
+      </div>
+
+      <button class="btn btn-primary">Get Started</button>
+
+      <ul>
+        <li>Advanced SEO optimization</li>
+        <li>Google & Meta Ads management</li>
+        <li>Social media content & growth</li>
+        <li>Conversion tracking</li>
+        <li>Priority support</li>
+      </ul>
+    </div>
+
+    <!-- ENTERPRISE -->
+    <div class="pricing-card">
+      <h3>Enterprise</h3>
+      <p class="plan-desc">
+        Designed for large & growing organizations
+      </p>
+
+      <div class="price">
+        <span>₹</span> Custom
+      </div>
+
+      <button class="btn btn-outline">Contact Sales</button>
+
+      <ul>
+        <li>Custom marketing strategy</li>
+        <li>Dedicated account manager</li>
+        <li>Multi-channel campaigns</li>
+        <li>Advanced analytics & reporting</li>
+        <li>Team training & consulting</li>
+      </ul>
+    </div>
+
+  </div>
+
+</section>
+
+<section class="findway-section">
+
+  <div class="findway-container">
+
+    <!-- LEFT IMAGE -->
+    <div class="findway-image-wrap">
+
+      <div class="trusted-badge">
+        <span>Trusted by</span>
+        <h3>1000+</h3>
+        <span>Clients</span>
+      </div>
+
+      <div class="image-circle">
+        <img src="./images/home2_image1.webp" alt="Findway Digital Team">
+      </div>
+
+    </div>
+
+    <!-- RIGHT CONTENT -->
+    <div class="findway-content">
+
+      <span class="brand-tag">Findway Digital</span>
+
+      <h2>
+        Complete digital marketing solutions with
+        result-driven strategies.
+      </h2>
+
+      <div class="feature-boxes">
+
+        <div class="feature-box">
+          <span class="dot"></span>
+          <p>Performance-focused marketing for startups & growing brands</p>
+        </div>
+
+        <div class="feature-box">
+          <span class="dot"></span>
+          <p>Helping businesses grow online with measurable ROI</p>
+        </div>
+
+      </div>
+
+      <p class="description">
+        At <strong>Findway Digital</strong>, we empower businesses to grow through
+        strategic digital marketing solutions that deliver measurable outcomes.
+        From SEO, social media marketing, and paid advertising to content strategy
+        and conversion optimization, our approach blends creativity with data-driven
+        insights.
+        <br><br>
+        As a trusted digital marketing agency, we focus on building strong online
+        visibility, driving qualified traffic, and converting audiences into loyal
+        customers. By leveraging modern tools, analytics, and performance tracking,
+        we ensure every campaign contributes to sustainable business growth and
+        long-term success.
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!--FOOTER SECTION-->
+<footer class="footer-wrapper">
+
+  <div class="footer-box">
+
+    <!-- TOP CONTENT -->
+    <div class="footer-top">
+
+      <!-- LOGO -->
+      <div class="footer-col brand">
+        <h3>STACKLY</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore eveniet est unde esse quo magni, harum aut molestiae eaque delectus.</p>
+      </div>
+
+      <!-- INFO -->
+      <div class="footer-col">
+        <h4>Links</h4>
+        <ul>
+          <li><a href="index2.html">Home</a></li>
+          <li><a href="portfolio.html">Portfolio</a></li>
+          <li><a href="faq.html">FAQs</a></li>
+          <li><a href="contact2.html">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- RESOURCE -->
+      <div class="footer-col">
+        <h4>Resource</h4>
+        <ul>
+          <li><a href="404.html">Blog</a></li>
+          <li><a href="404.html">Learn more</a></li>
+          <li><a href="404.html">Projects</a></li>
+          <li><a href="404.html">Designs</a></li>
+        </ul>
+      </div>
+
+      <!-- SOCIAL -->
+      <div class="footer-col">
+        <h4>Social</h4>
+        <ul>
+          <li><a href="404.html">Career</a></li>
+          <li><a href="404.html">Team</a></li>
+          <li><a href="404.html">FAQs</a></li>
+          <li><a href="404.html">Terms</a></li>
+          <li><a href="404.html">Privacy Policy</a></li>
+        </ul>
+      </div>
+
+      <!-- COMPANY -->
+<div class="footer-col contact-col">
+  <h4>Contact</h4>
+  <ul>
+    <li>
+      <i class="uil uil-phone"></i>
+      <span>+91 98765 43210</span>
+    </li>
+    <li>
+      <i class="uil uil-envelope"></i>
+      <span>info@yourcompany.com</span>
+    </li>
+    <li>
+      <i class="uil uil-map-marker"></i>
+      <span>Chennai, Tamil Nadu, India</span>
+    </li>
+  </ul>
+</div>
+
+    </div>
+
+    <!-- DIVIDER -->
+    <hr>
+
+    <!-- SOCIAL ICONS -->
+<div class="footer-social">
+  <a href="404.html"><i class="uil uil-facebook-f"></i></a>
+  <a href="404.html"><i class="uil uil-twitter"></i></a>
+  <a href="404.html"><i class="uil uil-instagram"></i></a>
+  <a href="404.html"><i class="uil uil-linkedin-alt"></i></a>
+  <a href="404.html"><i class="uil uil-google"></i></a>
+  <a href="404.html"><i class="uil uil-youtube"></i></a>
+</div>
+
+    <!-- COPYRIGHT -->
+    <p class="copyright">© Copyright. All rights reserved</p>
+
+  </div>
+
+  <!-- BOTTOM TEXT -->
+  <p class="made-by">Made with <span>❤</span> by STACKLY</p>
+
+</footer>
+
+<script src="./js/script.js"></script>
+<script>
+      const aboutSection = document.querySelector('.about-agency');
+
+  const aboutObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          aboutSection.classList.add('active');
+          aboutObserver.unobserve(aboutSection); // run once
+        }
+      });
+    },
+    {
+      threshold: 0.3
+    }
+  );
+
+  aboutObserver.observe(aboutSection);
+
+  const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if(entry.isIntersecting){
+      entry.target.classList.add("active");
+    }
+  });
+}, { threshold: 0.3 });
+
+document.querySelectorAll(
+  ".animate-flip, .animate-left, .animate-right, .animate-fade, .contact-white"
+).forEach(el => observer.observe(el));
+
+  /* OPEN LOGIN MODAL */
+function openLogin(){
+  document.getElementById("loginModal").style.display = "flex";
+}
+
+/* CLOSE LOGIN MODAL */
+function closeLogin(){
+  document.getElementById("loginModal").style.display = "none";
+}
+
+/* PASSWORD SHOW / HIDE */
+function togglePassword(){
+  const password = document.getElementById("loginPassword");
+  const eyeIcon = document.getElementById("eyeIcon");
+
+  // If eye is CLOSED → open it & show password
+  if (eyeIcon.classList.contains("fa-eye-slash")) {
+    password.type = "text";                 // show password
+    eyeIcon.classList.remove("fa-eye-slash");
+    eyeIcon.classList.add("fa-eye");
+  } 
+  // If eye is OPEN → close it & hide password
+  else {
+    password.type = "password";             // hide password
+    eyeIcon.classList.remove("fa-eye");
+    eyeIcon.classList.add("fa-eye-slash");
+  }
+}
+
+
+/* LOGIN ↔ SIGNUP TOGGLE */
+let isSignup = false;
+
+function toggleAuth(){
+  isSignup = !isSignup;
+
+document.getElementById("formTitle").innerText =
+  isSignup ? "Create Marketing Account" : "Marketing Client Login";
+
+document.getElementById("formSubtitle").innerText =
+  isSignup 
+    ? "Register your brand to manage campaigns, leads & ROI"
+    : "Access your digital marketing performance dashboard";
+
+document.getElementById("submitBtn").innerText =
+  isSignup ? "Create Account" : "Access Dashboard";
+
+document.getElementById("switchText").innerText =
+  isSignup 
+    ? "Already tracking campaigns with us?"
+    : "New to our marketing analytics platform?";
+
+document.querySelector(".switch-text a").innerText =
+  isSignup ? "Login" : "Create account";
+
+document.getElementById("companyName").style.display =
+  isSignup ? "block" : "none";
+
+document.getElementById("confirmPassword").style.display =
+  isSignup ? "block" : "none";
+}
+
+/* FORM SUBMIT → REDIRECT */
+function handleAuthSubmit(event){
+  event.preventDefault();
+  window.location.href = "404.html";
+}
+
+/* CLOSE MODAL ON OUTSIDE CLICK */
+window.addEventListener("click", function(e){
+  const modal = document.getElementById("loginModal");
+  if(e.target === modal){
+    modal.style.display = "none";
+  }
+});
+</script>
+</body>
+</html>

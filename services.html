@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Digital Marketing Website</title>
+
+  <!-- GOOGLE FONT -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+
+  <!-- REMIX ICON -->
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+
+<!-- FONT AWESOME -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="./css/services.css">
+</head>
+<body>
+<!-- LOGIN MODAL -->
+<div id="loginModal" class="login-modal">
+
+  <div class="login-box">
+    <span class="close-btn" onclick="closeLogin()">&times;</span>
+
+    <!-- TITLE -->
+    <h2 id="formTitle">Marketing Client Login</h2>
+    <p id="formSubtitle">Access your campaign analytics & performance dashboard</p>
+
+    <form id="authForm" onsubmit="handleAuthSubmit(event)">
+
+      <!-- SIGNUP ONLY FIELD -->
+      <input type="text"
+             id="companyName"
+             placeholder="Agency / Brand Name"
+             style="display:none;">
+
+      <!-- COMMON FIELDS -->
+      <input type="email"
+             placeholder="Business Email Address"
+             required>
+
+      <input type="text"
+             placeholder="Campaign ID / Client Code"
+             required>
+
+      <!-- PASSWORD -->
+      <div class="password-field">
+        <input type="password"
+               id="loginPassword"
+               placeholder="Dashboard Password"
+               required>
+
+        <i class="fa-solid fa-eye-slash toggle-eye"
+           id="eyeIcon"
+           onclick="togglePassword()"></i>
+      </div>
+
+      <!-- SIGNUP ONLY FIELD -->
+      <input type="password"
+             id="confirmPassword"
+             placeholder="Confirm Dashboard Password"
+             style="display:none;">
+
+      <button type="submit"
+              class="login-submit"
+              id="submitBtn">
+        Access Dashboard
+      </button>
+
+    </form>
+
+    <!-- SWITCH LINK -->
+    <p class="switch-text">
+      <span id="switchText">New to our marketing analytics platform?</span>
+      <a href="javascript:void(0)" onclick="toggleAuth()">Create account</a>
+    </p>
+
+  </div>
+
+</div>
+
+<!-- NAVBAR -->
+<header>
+  <nav class="navbar">
+
+    <div class="nav__header">
+      <div class="nav__logo">
+        <a href="index.html">
+          <img src="./images/stackly_logo.webp" class="logo-img" alt="logo">
+        </a>
+      </div>
+
+      <div class="nav__menu__btn" id="menu-btn">
+        <i class="ri-menu-line"></i>
+      </div>
+    </div>
+
+    <ul class="nav__links" id="nav-links">
+      <li class="dropdown">
+        <a href="index.html">Home</a>
+        <i class="ri-arrow-down-s-line arrow"></i>
+        <ul class="dropdown-menu">
+          <li><a href="index2.html">Home Page 2</a></li>
+        </ul>
+      </li>
+
+      <li><a href="about.html">About</a></li>
+      <li><a href="service.html">Services</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="dashboard.html">Dashboard</a></li>
+      <li>
+  <a href="javascript:void(0)" onclick="openLogin()" class="login-btn">
+    Login
+  </a>
+</li>
+    </ul>
+
+  </nav>
+</header>
+
+<section class="page-header">
+  
+  <img src="./images/video3.gif" alt="Digital Marketing Background" class="bg-gif">
+
+  <div class="header-content">
+    <p class="breadcrumb">
+      <a href="index.html">Home</a> / <span>Services</span>
+    </p>
+
+    <h1 class="animate-title">Digital Marketing Services</h1>
+
+    <p class="subheading">
+      “We craft powerful digital strategies that drive traffic, generate leads, and turn visitors into loyal customers.”
+    </p>
+  </div>
+
+</section>
+
+<section class="dm-services">
+
+  <span class="dm-tag">OUR SERVICES</span>
+  <h2 class="dm-title">What we can do for your business</h2>
+  <p class="dm-subtitle">
+    We provide result-driven digital marketing services to grow your brand,
+    generate leads, and increase revenue.
+  </p>
+
+  <div class="dm-grid">
+
+    <div class="dm-card">
+      <div class="dm-icon"><i class="ri-search-line"></i></div>
+      <h3>SEO Optimization</h3>
+      <p>Improve your Google rankings and drive organic traffic with advanced SEO strategies.</p>
+    </div>
+
+    <div class="dm-card">
+      <div class="dm-icon"><i class="ri-megaphone-line"></i></div>
+      <h3>Social Media Marketing</h3>
+      <p>Engage audiences and grow your brand across Instagram, Facebook and LinkedIn.</p>
+    </div>
+
+    <div class="dm-card">
+      <div class="dm-icon"><i class="ri-line-chart-line"></i></div>
+      <h3>PPC Advertising</h3>
+      <p>High-converting paid campaigns that generate quality leads instantly.</p>
+    </div>
+
+    <div class="dm-card">
+      <div class="dm-icon"><i class="ri-file-text-line"></i></div>
+      <h3>Content Marketing</h3>
+      <p>Create valuable content that attracts, educates and converts your audience.</p>
+    </div>
+
+    <div class="dm-card">
+      <div class="dm-icon"><i class="ri-mail-send-line"></i></div>
+      <h3>Email Marketing</h3>
+      <p>Automated campaigns designed to nurture leads and increase retention.</p>
+    </div>
+
+    <div class="dm-card">
+      <div class="dm-icon"><i class="ri-global-line"></i></div>
+      <h3>Web Development</h3>
+      <p>Modern, responsive and SEO-friendly websites built for performance.</p>
+    </div>
+
+  </div>
+
+</section>
+
+<section class="process-flow">
+
+  <!-- Background GIF -->
+  <img src="./images/video10.gif" class="process-bg-gif" alt="Background Animation">
+  <div class="process-overlay"></div>
+
+  <!-- HEADING AREA -->
+  <div class="process-heading">
+    <span class="process-tag">OUR PROCESS</span>
+
+    <h2 class="process-title">
+      How Our Path to Digital Success
+    </h2>
+
+    <p class="process-subtitle">
+Our proven process helps attract, engage, and convert customers effectively!
+    </p>
+  </div>
+
+  <div class="process-track">
+
+    <div class="step top">
+      <div class="icon"><i class="ri-search-line"></i></div>
+      <h4>Research</h4>
+      <p>Understanding your market and audience.</p>
+    </div>
+
+    <div class="step bottom">
+      <div class="icon"><i class="ri-lightbulb-line"></i></div>
+      <h4>Strategy</h4>
+      <p>Creating a marketing roadmap.</p>
+    </div>
+
+    <div class="step top">
+      <div class="icon"><i class="ri-settings-3-line"></i></div>
+      <h4>Execution</h4>
+      <p>Launching campaigns effectively.</p>
+    </div>
+
+    <div class="step bottom">
+      <div class="icon"><i class="ri-line-chart-line"></i></div>
+      <h4>Optimization</h4>
+      <p>Improving performance continuously.</p>
+    </div>
+
+    <div class="step top">
+      <div class="icon"><i class="ri-bar-chart-box-line"></i></div>
+      <h4>Growth</h4>
+      <p>Scaling results for success.</p>
+    </div>
+
+  </div>
+
+</section>
+
+<!--FOOTER SECTION-->
+<footer class="footer-wrapper">
+
+  <div class="footer-box">
+
+    <!-- TOP CONTENT -->
+    <div class="footer-top">
+
+      <!-- LOGO -->
+      <div class="footer-col brand">
+        <h3>STACKLY</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore eveniet est unde esse quo magni, harum aut molestiae eaque delectus.</p>
+      </div>
+
+      <!-- INFO -->
+      <div class="footer-col">
+        <h4>Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="dashboard.html">Dashboard</a></li>
+        </ul>
+      </div>
+
+      <!-- RESOURCE -->
+      <div class="footer-col">
+        <h4>Resource</h4>
+        <ul>
+          <li><a href="404.html">Blog</a></li>
+          <li><a href="404.html">Learn more</a></li>
+          <li><a href="404.html">Projects</a></li>
+          <li><a href="404.html">Designs</a></li>
+        </ul>
+      </div>
+
+      <!-- SOCIAL -->
+      <div class="footer-col">
+        <h4>Social</h4>
+        <ul>
+          <li><a href="404.html">Career</a></li>
+          <li><a href="404.html">Team</a></li>
+          <li><a href="404.html">FAQs</a></li>
+          <li><a href="404.html">Terms</a></li>
+          <li><a href="404.html">Privacy Policy</a></li>
+        </ul>
+      </div>
+
+      <!-- COMPANY -->
+<div class="footer-col contact-col">
+  <h4>Contact</h4>
+  <ul>
+    <li>
+      <i class="uil uil-phone"></i>
+      <span>+91 98765 43210</span>
+    </li>
+    <li>
+      <i class="uil uil-envelope"></i>
+      <span>info@yourcompany.com</span>
+    </li>
+    <li>
+      <i class="uil uil-map-marker"></i>
+      <span>Chennai, Tamil Nadu, India</span>
+    </li>
+  </ul>
+</div>
+
+    </div>
+
+    <!-- DIVIDER -->
+    <hr>
+
+    <!-- SOCIAL ICONS -->
+<div class="footer-social">
+  <a href="404.html"><i class="uil uil-facebook-f"></i></a>
+  <a href="404.html"><i class="uil uil-twitter"></i></a>
+  <a href="404.html"><i class="uil uil-instagram"></i></a>
+  <a href="404.html"><i class="uil uil-linkedin-alt"></i></a>
+  <a href="404.html"><i class="uil uil-google"></i></a>
+  <a href="404.html"><i class="uil uil-youtube"></i></a>
+</div>
+
+    <!-- COPYRIGHT -->
+    <p class="copyright">© Copyright. All rights reserved</p>
+
+  </div>
+
+  <!-- BOTTOM TEXT -->
+  <p class="made-by">Made with <span>❤</span> by STACKLY</p>
+
+</footer>
+<script>
+  /* OPEN LOGIN MODAL */
+function openLogin(){
+  document.getElementById("loginModal").style.display = "flex";
+}
+
+/* CLOSE LOGIN MODAL */
+function closeLogin(){
+  document.getElementById("loginModal").style.display = "none";
+}
+
+/* PASSWORD SHOW / HIDE */
+function togglePassword(){
+  const password = document.getElementById("loginPassword");
+  const eyeIcon = document.getElementById("eyeIcon");
+
+  // If eye is CLOSED → open it & show password
+  if (eyeIcon.classList.contains("fa-eye-slash")) {
+    password.type = "text";                 // show password
+    eyeIcon.classList.remove("fa-eye-slash");
+    eyeIcon.classList.add("fa-eye");
+  } 
+  // If eye is OPEN → close it & hide password
+  else {
+    password.type = "password";             // hide password
+    eyeIcon.classList.remove("fa-eye");
+    eyeIcon.classList.add("fa-eye-slash");
+  }
+}
+
+
+/* LOGIN ↔ SIGNUP TOGGLE */
+let isSignup = false;
+
+function toggleAuth(){
+  isSignup = !isSignup;
+
+document.getElementById("formTitle").innerText =
+  isSignup ? "Create Marketing Account" : "Marketing Client Login";
+
+document.getElementById("formSubtitle").innerText =
+  isSignup 
+    ? "Register your brand to manage campaigns, leads & ROI"
+    : "Access your digital marketing performance dashboard";
+
+document.getElementById("submitBtn").innerText =
+  isSignup ? "Create Account" : "Access Dashboard";
+
+document.getElementById("switchText").innerText =
+  isSignup 
+    ? "Already tracking campaigns with us?"
+    : "New to our marketing analytics platform?";
+
+document.querySelector(".switch-text a").innerText =
+  isSignup ? "Login" : "Create account";
+
+document.getElementById("companyName").style.display =
+  isSignup ? "block" : "none";
+
+document.getElementById("confirmPassword").style.display =
+  isSignup ? "block" : "none";
+}
+
+
+/* FORM SUBMIT → REDIRECT */
+function handleAuthSubmit(event){
+  event.preventDefault();
+  window.location.href = "404.html";
+}
+
+/* CLOSE MODAL ON OUTSIDE CLICK */
+window.addEventListener("click", function(e){
+  const modal = document.getElementById("loginModal");
+  if(e.target === modal){
+    modal.style.display = "none";
+  }
+});
+
+const slides = document.querySelectorAll(".slide");
+let index = 0;
+
+setInterval(() => {
+  slides[index].classList.remove("active");
+  index = (index + 1) % slides.length;
+  slides[index].classList.add("active");
+}, 4000);
+
+  /* SCROLL EFFECT */
+  window.addEventListener("scroll", () => {
+    document.querySelector(".navbar")
+      .classList.toggle("scrolled", window.scrollY > 50);
+  });
+
+      /* MOBILE MENU */
+  const menuBtn = document.getElementById("menu-btn");
+  const navLinks = document.getElementById("nav-links");
+
+  menuBtn.addEventListener("click", () => {
+    navLinks.classList.toggle("open");
+    menuBtn.classList.toggle("active");
+  });
+
+  /* DROPDOWN (ARROW ONLY) */
+  document.querySelectorAll(".dropdown .arrow").forEach(arrow => {
+    arrow.addEventListener("click", (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      arrow.closest(".dropdown").classList.toggle("active");
+    });
+  }); 
+</script>
+<script src="./js/script.js"></script>
+</body>
+</html>

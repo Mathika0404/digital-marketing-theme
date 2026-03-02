@@ -1,0 +1,761 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Segoe UI', sans-serif;
+}
+
+body{
+  background:linear-gradient(135deg,#1e293b,#111827);
+  color:#fff;
+}
+
+/* PREVENT HORIZONTAL SCROLL */
+html, body {
+  overflow-x: hidden;
+  max-width: 100%;
+}
+
+.dashboard {
+  width: 100%;
+}
+
+.dashboard{
+  display:flex;
+  min-height:100vh;
+}
+
+/* SIDEBAR */
+.sidebar{
+  width:240px;
+  background:#0f172a;
+  padding:30px 20px;
+}
+
+.logo{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  font-size:20px;
+  font-weight:600;
+  margin-bottom:40px;
+}
+
+.logo i{
+  color:#22c55e;
+  font-size:24px;
+}
+
+.menu{
+  list-style:none;
+}
+
+.menu li{
+  padding:12px;
+  margin-bottom:10px;
+  border-radius:8px;
+  cursor:pointer;
+  display:flex;
+  align-items:center;
+  gap:10px;
+  transition:0.3s;
+}
+
+.menu li:hover,
+.menu li.active{
+  background:#22c55e;
+  color:#000;
+}
+
+/* MAIN */
+.main{
+  flex:1;
+  padding:30px;
+}
+
+/* TOPBAR */
+.topbar{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-bottom:30px;
+}
+
+.top-actions{
+  display:flex;
+  align-items:center;
+  gap:25px;
+}
+
+/* SEARCH */
+.search-box{
+  background:#1f2937;
+  padding:6px 12px;
+  border-radius:30px;
+  display:flex;
+  align-items:center;
+}
+
+.search-box form{
+  display:flex;
+  align-items:center;
+}
+
+.search-box input{
+  background:transparent;
+  border:none;
+  outline:none;
+  color:#fff;
+  width:180px;
+  padding:6px;
+}
+
+.search-box button{
+  background:#22c55e;
+  border:none;
+  width:32px;
+  height:32px;
+  border-radius:50%;
+  color:#000;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  cursor:pointer;
+  transition:0.3s;
+}
+
+.search-box button:hover{
+  background:#16a34a;
+}
+
+/* NOTIFICATION */
+.notification{
+  position:relative;
+  cursor:pointer;
+}
+
+.notification i{
+  font-size:22px;
+}
+
+.badge{
+  position:absolute;
+  top:-6px;
+  right:-6px;
+  background:red;
+  font-size:10px;
+  padding:3px 6px;
+  border-radius:50%;
+}
+
+/* PROFILE */
+.profile{
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
+
+.profile img{
+  width:35px;
+  border-radius:50%;
+}
+
+/* CARDS */
+.cards{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:20px;
+}
+
+.card{
+  background:#1f2937;
+  padding:25px;
+  border-radius:15px;
+  box-shadow:0 10px 25px rgba(0,0,0,0.3);
+}
+
+/* VISITOR ONLINE – MARKETING FLOW CHART */
+.card:nth-child(2) .chart-line{
+  height:140px;
+  border-radius:14px;
+  position:relative;
+  overflow:hidden;
+  opacity:1;
+
+  background: linear-gradient(
+    180deg,
+    #0f172a,
+    #020617
+  );
+}
+
+/* glowing bars */
+.card:nth-child(2) .chart-line::before{
+  content:"";
+  position:absolute;
+  inset:18px 18px 28px 18px;
+
+  background:
+    linear-gradient(#22c55e,#22c55e) 0% 100% / 8% 15% no-repeat,
+    linear-gradient(#22c55e,#22c55e) 14% 100% / 8% 28% no-repeat,
+    linear-gradient(#22c55e,#22c55e) 28% 100% / 8% 42% no-repeat,
+    linear-gradient(#22c55e,#22c55e) 42% 100% / 8% 58% no-repeat,
+    linear-gradient(#22c55e,#22c55e) 56% 100% / 8% 72% no-repeat,
+    linear-gradient(#22c55e,#22c55e) 70% 100% / 8% 88% no-repeat,
+    linear-gradient(#22c55e,#22c55e) 84% 100% / 8% 100% no-repeat;
+
+  filter: drop-shadow(0 0 10px rgba(34,197,94,0.6));
+  opacity:0.9;
+}
+
+/* upward flow arrow */
+.card:nth-child(2) .chart-line::after{
+  content:"";
+  position:absolute;
+  left:10%;
+  bottom:25%;
+  width:80%;
+  height:3px;
+
+  background: linear-gradient(
+    90deg,
+    transparent,
+    #3b82f6,
+    #22c55e
+  );
+
+  transform: rotate(-12deg);
+  transform-origin: left center;
+
+  box-shadow: 0 0 12px rgba(59,130,246,0.8);
+}
+
+.card-top{
+  display:flex;
+  justify-content:space-between;
+  margin-bottom:15px;
+}
+
+.view-btn{
+  background:#22c55e;
+  color:#000;
+  padding:5px 14px;
+  border-radius:20px;
+  text-decoration:none;
+  font-size:14px;
+  font-weight:500;
+  transition:0.3s;
+}
+
+.view-btn:hover{
+  background:#16a34a;
+}
+
+.growth{
+  display:inline-block;
+  margin-top:10px;
+  padding:4px 10px;
+  border-radius:20px;
+  font-size:12px;
+}
+
+.up{
+  background:#16a34a;
+}
+
+/* FAKE CHART */
+.chart-line{
+  height:120px;
+  border-radius:14px;
+  background:linear-gradient(to right,#22c55e,#3b82f6);
+  opacity:0.4;
+}
+
+/* PROGRESS */
+.progress-item{
+  margin-bottom:15px;
+}
+
+.progress-bar{
+  background:#374151;
+  height:8px;
+  border-radius:20px;
+  margin-top:5px;
+}
+
+.progress{
+  height:8px;
+  background:#3b82f6;
+  border-radius:20px;
+}
+
+.green{
+  background:#22c55e;
+}
+
+/* MARKETING ROW */
+.marketing-row{
+  margin-top:20px;
+}
+
+/* BAR CHART */
+.bar-chart{
+  display:flex;
+  align-items:flex-end;
+  justify-content:space-between;
+  height:120px;
+  margin-top:20px;
+}
+
+.bar{
+  width:12%;
+  background:#374151;
+  border-radius:6px;
+  transition:0.3s;
+}
+
+.bar.active{
+  background:#22c55e;
+  box-shadow:0 0 12px rgba(34,197,94,0.6);
+}
+
+/* SEMI CIRCLE */
+.semi-circle{
+  width:160px;
+  height:80px;
+  border-radius:160px 160px 0 0;
+  background:conic-gradient(#22c55e 72%, #374151 0);
+  margin:30px auto 10px;
+  position:relative;
+}
+
+.inner-circle{
+  position:absolute;
+  bottom:-20px;
+  left:50%;
+  transform:translateX(-50%);
+  width:120px;
+  height:60px;
+  background:#1f2937;
+  border-radius:120px 120px 0 0;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:22px;
+  font-weight:600;
+}
+
+/* DONUT CHART */
+.donut-chart{
+  width:150px;
+  height:150px;
+  border-radius:50%;
+  margin:20px auto;
+  background:
+    conic-gradient(
+      #22c55e 0 40%,
+      #3b82f6 40% 70%,
+      #f97316 70% 100%
+    );
+  position:relative;
+}
+
+.donut-inner{
+  position:absolute;
+  inset:25px;
+  background:#1f2937;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-weight:600;
+}
+
+/* LEGEND */
+.legend{
+  display:flex;
+  flex-direction:column;
+  gap:6px;
+  font-size:13px;
+}
+
+.dot{
+  width:10px;
+  height:10px;
+  border-radius:50%;
+  display:inline-block;
+  margin-right:6px;
+}
+
+.green{background:#22c55e;}
+.blue{background:#3b82f6;}
+.orange{background:#f97316;}
+
+/* BIG PROGRESS */
+.progress-bar-big{
+  height:8px;
+  background:#374151;
+  border-radius:20px;
+  margin:15px 0;
+}
+
+.progress-fill{
+  width:70%;
+  height:8px;
+  background:#22c55e;
+  border-radius:20px;
+}
+
+/* TASK STATS */
+.task-stats{
+  display:flex;
+  justify-content:space-between;
+  margin-top:15px;
+}
+
+/* CUSTOMER METRIC */
+.customer-metric{
+  text-align:center;
+}
+
+.customer-metric .avatar{
+  width:80px;
+  height:80px;
+  border-radius:50%;
+  background:linear-gradient(135deg,#22c55e,#3b82f6);
+  margin:20px auto;
+}
+
+/* =======================
+   SHARED CARD POLISH
+======================= */
+.card{
+  background: linear-gradient(180deg,#1f2937,#1b2430);
+  border-radius:16px;
+  padding:22px;
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,0.03),
+    0 20px 40px rgba(0,0,0,0.35);
+}
+
+/* card header */
+.card-top p{
+  font-size:14px;
+  font-weight:500;
+  color:#e5e7eb;
+}
+
+.card-top select{
+  background:#111827;
+  border:none;
+  color:#9ca3af;
+  padding:6px 10px;
+  border-radius:8px;
+  font-size:12px;
+}
+
+/* =======================
+   REVENUE BAR CHART
+======================= */
+.bar-chart{
+  height:140px;
+  margin-top:25px;
+}
+
+.bar{
+  width:14%;
+  background:linear-gradient(180deg,#374151,#1f2937);
+  border-radius:8px;
+}
+
+.bar.active{
+  background:linear-gradient(180deg,#34d399,#22c55e);
+  box-shadow:0 0 0 1px rgba(34,197,94,0.4),
+             0 8px 20px rgba(34,197,94,0.45);
+}
+
+/* =======================
+   RETENTION GAUGE
+======================= */
+.semi-circle{
+  width:190px;
+  height:95px;
+  background:
+    conic-gradient(
+      #34d399 0deg 260deg,
+      #374151 260deg 360deg
+    );
+}
+
+.inner-circle{
+  background:#111827;
+  color:#e5e7eb;
+  font-size:26px;
+  letter-spacing:0.5px;
+}
+
+/* =======================
+   DONUT (TOP CHANNELS)
+======================= */
+.donut-chart{
+  background:
+    conic-gradient(
+      #34d399 0 42%,
+      #3b82f6 42% 72%,
+      #fb7185 72% 100%
+    );
+  box-shadow:0 0 0 1px rgba(255,255,255,0.05);
+}
+
+.legend span{
+  color:#cbd5f5;
+  display:flex;
+  align-items:center;
+}
+
+/* =======================
+   WEEKLY TASKS CARD
+======================= */
+.progress-bar-big{
+  height:6px;
+  background:#1f2937;
+}
+
+.progress-fill{
+  background:linear-gradient(90deg,#34d399,#22c55e);
+}
+
+.task-stats h2{
+  font-size:28px;
+  font-weight:600;
+}
+
+.task-stats p{
+  font-size:13px;
+  color:#9ca3af;
+}
+
+/* =======================
+   CUSTOMER INSIGHTS
+======================= */
+.customer-metric h3{
+  font-size:16px;
+  font-weight:600;
+  margin-bottom:10px;
+}
+
+.customer-metric p{
+  font-size:13px;
+  color:#9ca3af;
+}
+
+.customer-metric h2{
+  font-size:26px;
+  margin:5px 0;
+}
+
+.customer-metric .avatar{
+  background:
+    radial-gradient(circle at top,#34d399,#22c55e);
+  box-shadow:0 0 20px rgba(34,197,94,0.6);
+}
+
+/* ===========================
+   DIGITAL MARKETING SIDEBAR CARD
+=========================== */
+.marketing-metric-card{
+  background:linear-gradient(180deg,#f8fafc,#eef2f7);
+  border-radius:18px;
+  padding:18px 16px;
+  margin-top:30px;
+  color:#111827;
+  box-shadow:
+    0 15px 30px rgba(0,0,0,0.15),
+    inset 0 1px 0 rgba(255,255,255,0.8);
+}
+
+/* Header */
+.metric-header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+.metric-header h4{
+  font-size:14px;
+  font-weight:600;
+}
+
+.metric-header i{
+  font-size:18px;
+  color:#6b7280;
+}
+
+.metric-sub{
+  font-size:12px;
+  color:#6b7280;
+  margin:4px 0 12px;
+}
+
+/* Avatar */
+.metric-avatar{
+  width:110px;
+  height:110px;
+  border-radius:50%;
+  margin:0 auto 12px;
+  background:radial-gradient(circle at top,#22c55e,#3b82f6);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.metric-avatar img{
+  width:90px;
+  height:90px;
+  border-radius:50%;
+  background:#fff;
+}
+
+/* CTR Indicator */
+.metric-rating{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  font-size:12px;
+  margin-bottom:14px;
+}
+
+.rating-bar{
+  flex:1;
+  height:6px;
+  background:#d1d5db;
+  border-radius:10px;
+  margin:0 8px;
+  overflow:hidden;
+}
+
+.rating-fill{
+  width:84%;
+  height:100%;
+  background:linear-gradient(90deg,#22c55e,#16a34a);
+}
+
+/* Bottom Stats */
+.metric-stats{
+  display:flex;
+  justify-content:space-between;
+  gap:10px;
+  text-align:left;
+}
+
+.metric-stats p{
+  font-size:11px;
+  color:#6b7280;
+}
+
+.metric-stats h5{
+  font-size:14px;
+  font-weight:600;
+  color:#111827;
+}
+
+/* =========================
+   TABLET (768px)
+========================= */
+@media (max-width: 768px) {
+
+  .dashboard {
+    flex-direction: column;
+  }
+
+  /* Sidebar becomes top horizontal bar */
+  .sidebar {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .menu {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .menu li {
+    flex: 1 1 45%;
+    text-align: center;
+    justify-content: center;
+  }
+
+  .main {
+    padding: 20px;
+  }
+
+  .cards {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .marketing-row {
+    grid-template-columns: 1fr;
+  }
+
+  .semi-circle,
+  .donut-chart {
+    margin: 20px auto;
+  }
+
+}
+
+/* =========================
+   MOBILE (360px)
+========================= */
+@media (max-width: 360px) {
+
+  .topbar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .top-actions {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .search-box input {
+    width: 120px;
+  }
+
+  /* Stack cards vertically */
+  .cards {
+    grid-template-columns: 1fr;
+  }
+
+  .sidebar {
+    padding: 15px;
+  }
+
+  .menu {
+    flex-direction: column;
+  }
+
+  .menu li {
+    width: 100%;
+  }
+
+  .bar-chart {
+    height: 110px;
+  }
+
+  .semi-circle {
+    width: 160px;
+    height: 80px;
+  }
+
+  .donut-chart {
+    width: 130px;
+    height: 130px;
+  }
+
+}

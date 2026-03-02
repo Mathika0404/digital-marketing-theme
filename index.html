@@ -1,0 +1,981 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Digital Marketing Website</title>
+
+  <!-- GOOGLE FONT -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+
+  <!-- REMIX ICON -->
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+
+<!-- FONT AWESOME -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+
+<!-- PRELOADER -->
+<div id="preloader">
+  <img src="./images/stackly_logo.webp" alt="Loader">
+</div>
+
+<!-- LOGIN MODAL -->
+<div id="loginModal" class="login-modal">
+
+  <div class="login-box">
+    <span class="close-btn" onclick="closeLogin()">&times;</span>
+
+    <!-- TITLE -->
+    <h2 id="formTitle">Marketing Client Login</h2>
+    <p id="formSubtitle">Access your campaign analytics & performance dashboard</p>
+
+    <form id="authForm" onsubmit="handleAuthSubmit(event)">
+
+      <!-- SIGNUP ONLY FIELD -->
+      <input type="text"
+             id="companyName"
+             placeholder="Agency / Brand Name"
+             style="display:none;">
+
+      <!-- COMMON FIELDS -->
+      <input type="email"
+             placeholder="Business Email Address"
+             required>
+
+      <input type="text"
+             placeholder="Campaign ID / Client Code"
+             required>
+
+      <!-- PASSWORD -->
+      <div class="password-field">
+        <input type="password"
+               id="loginPassword"
+               placeholder="Dashboard Password"
+               required>
+
+        <i class="fa-solid fa-eye-slash toggle-eye"
+           id="eyeIcon"
+           onclick="togglePassword()"></i>
+      </div>
+
+      <!-- SIGNUP ONLY FIELD -->
+      <input type="password"
+             id="confirmPassword"
+             placeholder="Confirm Dashboard Password"
+             style="display:none;">
+
+      <button type="submit"
+              class="login-submit"
+              id="submitBtn">
+        Access Dashboard
+      </button>
+
+    </form>
+
+    <!-- SWITCH LINK -->
+    <p class="switch-text">
+      <span id="switchText">New to our marketing analytics platform?</span>
+      <a href="javascript:void(0)" onclick="toggleAuth()">Create account</a>
+    </p>
+
+  </div>
+
+</div>
+
+<!-- NAVBAR -->
+<header>
+  <nav class="navbar">
+
+    <div class="nav__header">
+      <div class="nav__logo">
+        <a href="index.html">
+          <img src="./images/stackly_logo.webp" class="logo-img" alt="logo">
+        </a>
+      </div>
+
+      <div class="nav__menu__btn" id="menu-btn">
+        <i class="ri-menu-line"></i>
+      </div>
+    </div>
+
+    <ul class="nav__links" id="nav-links">
+      <li class="dropdown">
+        <a href="index.html">Home</a>
+        <i class="ri-arrow-down-s-line arrow"></i>
+        <ul class="dropdown-menu">
+          <li><a href="index2.html">Home Page 2</a></li>
+        </ul>
+      </li>
+
+      <li><a href="about.html">About</a></li>
+      <li><a href="service.html">Services</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="dashboard.html">Dashboard</a></li>
+            <li>
+  <a href="javascript:void(0)" onclick="openLogin()" class="login-btn">
+    Login
+  </a>
+</li>
+    </ul>
+
+  </nav>
+</header>
+
+<section>
+     <div class="bottom-sec">
+<div class="bottom-left">
+
+  <!-- SMALL TAG -->
+  <span class="tag">OUR DIGITAL MARKETING</span>
+
+  <!-- SLIDER CONTENT -->
+  <div class="content-slider">
+
+    <div class="slide active">
+      <h1>
+        Watch <span class="blue">our videos</span> for<br>
+        your <span class="red">digital growth</span>
+      </h1>
+      <p>
+        Learn SEO, social media marketing, paid ads, and conversion strategies
+        through easy-to-follow tutorials designed for real-world projects.
+      </p>
+    </div>
+
+    <div class="slide">
+      <h1>
+        Boost <span class="blue">your brand</span> with<br>
+        smart <span class="red">marketing ideas</span>
+      </h1>
+      <p>
+        Discover proven digital marketing techniques that help your business
+        reach the right audience and increase online visibility.
+      </p>
+    </div>
+
+    <div class="slide">
+      <h1>
+        Master <span class="blue">online marketing</span><br>
+        for <span class="red">better results</span>
+      </h1>
+      <p>
+        From content strategy to analytics, learn how to build campaigns
+        that convert visitors into loyal customers.
+      </p>
+    </div>
+
+  </div>
+
+  <!-- BUTTONS -->
+<div class="btn-sec">
+    <a href="404.html">
+  <button class="primary-btn">
+    <i class="ri-play-circle-line"></i>
+    Watch Videos
+  </button>
+  </a>
+
+  <a href="404.html">
+  <button class="icon-btn">
+    <i class="ri-phone-line"></i>
+    050-040-0320
+  </button>
+  </a>
+</div>
+
+  <!-- SLIDER DOTS -->
+  <div class="slider-dots">
+    <span class="dot active"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+  </div>
+
+</div>
+        <div class="bottom-right">
+            <div class="ball-circle">
+                <div class="ball"></div>
+            </div>
+            <div class="main-circle"></div>
+            <div class="circle2">
+                <img src="./images/circle_img.png" alt=""/>
+            </div>
+            <div class="shot-circle">
+                <img src="images/shape.svg" alt=""/>
+            </div>
+        </div>
+     </div>
+
+   </div>
+</section>
+
+<section class="dm-stats">
+  <div class="stats-container">
+
+    <div class="stat-box">
+      <h3><span class="counter" data-target="250">0</span>+</h3>
+      <p>Successful Campaigns</p>
+    </div>
+
+    <div class="stat-box">
+      <h3><span class="counter" data-target="1200">0</span>+</h3>
+      <p>SEO Keywords Ranked</p>
+    </div>
+
+    <div class="stat-box">
+      <h3><span class="counter" data-target="15000">0</span>+</h3>
+      <p>Qualified Leads Generated</p>
+    </div>
+
+    <div class="stat-box">
+      <h3><span class="counter" data-target="320">0</span>+</h3>
+      <p>Brands Scaled Online</p>
+    </div>
+
+    <div class="stat-box">
+      <h3><span class="counter" data-target="98">0</span>%</h3>
+      <p>Client Satisfaction Rate</p>
+    </div>
+
+  </div>
+</section>
+
+<section class="about-agency">
+
+  <!-- TOP AREA -->
+  <div class="about-top about-animate">
+
+    <!-- LEFT -->
+    <div class="about-title">
+         <span class="tag">ABOUT US</span>
+      <h2>
+        <span class="red">Introduction</span> To Best<br>
+        <span class="dark">Digital Marketing Agency!</span>
+      </h2>
+     
+    </div>
+
+    <!-- RIGHT -->
+    <div class="about-desc-grid">
+      <p>
+We help businesses grow online through SEO, content marketing,
+paid advertising, and conversion optimization strategies.
+Our team focuses on increasing visibility, driving quality traffic,
+and turning visitors into loyal customers using data-driven insights.
+With proven digital solutions, we ensure measurable and sustainable growth.
+      </p>
+      <p>
+Our digital experts deliver data-driven strategies that
+increase online visibility and attract the right audience.
+We focus on boosting traffic, engagement, and brand awareness
+through innovative campaigns and performance-based marketing.
+By analyzing user behavior and market trends, we optimize results
+and help businesses achieve long-term digital success.
+      </p>
+    </div>
+
+  </div>
+
+  <!-- FEATURES -->
+  <div class="about-features">
+
+<div class="feature-box about-animate">
+  <div class="feature-head">
+    <div class="icon red-bg">
+      <i class="ri-award-line"></i>
+    </div>
+    <h4>Best Price Guaranteed</h4>
+  </div>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+</div>
+
+<div class="feature-box dark about-animate">
+  <div class="feature-head">
+    <div class="icon dark-bg">
+      <i class="ri-line-chart-line"></i>
+    </div>
+    <h4>Marketing Analysis</h4>
+  </div>
+  <p>Performance tracking & growth-focused analytics.</p>
+</div>
+
+<div class="feature-box about-animate">
+  <div class="feature-head">
+    <div class="icon red-bg">
+      <i class="ri-team-line"></i>
+    </div>
+    <h4>Professional Team</h4>
+  </div>
+  <p>Experienced SEO & digital marketing specialists.</p>
+</div>
+  </div>
+
+  <!-- IMAGES -->
+   <div class="about-section-wrap">
+  <div class="about-images">
+
+   <div class="image-large about-animate">
+      <img src="./images/social_media.webp" alt="Team Work">
+    </div>
+
+    <div class="image-video about-animate">
+      <img src="./images/about_section.webp" alt="Marketing Video">
+      <a href="404.html">
+      <span class="play-btn">
+        <i class="ri-play-fill"></i>
+      </span>
+      </a>
+    </div>
+
+  </div>
+
+  <div class="about-left-content about-animate">
+
+  <h2>
+    We empower small<br>
+    <span class="highlight">business growth online</span>
+  </h2>
+
+  <p class="sub-text">
+    We help startups and growing businesses build a strong online presence
+    through SEO, content marketing, paid advertising, and digital strategy.
+  </p>
+
+  <p>
+    Our digital marketing solutions are designed to increase visibility,
+    attract the right audience, and convert visitors into loyal customers.
+    With data-driven insights and creative execution, we deliver measurable
+    results that support long-term business success.
+  </p>
+
+  <div class="quote-box">
+    <span class="quote">
+      “Creating impact through smart digital marketing strategies”
+    </span>
+    <span class="author">— M.A Developer, Digital Strategist</span>
+  </div>
+
+</div>
+</div>
+</section>
+
+<!-- SERVICE SECTION -->
+<section class="services">
+
+  <!-- Background -->
+  <img src="images/about-bg.png" class="services-bg" alt="">
+
+  <div class="container">
+
+    <!-- TOP CENTER HEADING -->
+    <div class="section-header animate">
+      <span class="tag">OUR SERVICES</span>
+      <h2>Smart & Creative <span>Digital Solutions</span></h2>
+      <p>
+        We provide powerful digital marketing services to help
+        businesses grow faster and perform better online.
+      </p>
+    </div>
+
+    <!-- CONTENT -->
+    <div class="services-content">
+
+      <!-- LEFT : IMAGE -->
+      <div class="services-right animate">
+        <img src="images/about-left-image.png" alt="Services Image">
+      </div>
+
+      <!-- RIGHT : SERVICES -->
+      <div class="services-left">
+
+        <div class="service-item animate">
+          <span class="icon-circle">
+            <i class="uil uil-chart-line"></i>
+          </span>
+          <div class="service-text">
+            <h4>Data Analytics</h4>
+            <p>Turn raw data into actionable business insights.</p>
+          </div>
+        </div>
+
+        <div class="service-item animate">
+          <span class="icon-circle">
+            <i class="uil uil-search"></i>
+          </span>
+          <div class="service-text">
+            <h4>SEO Optimization</h4>
+            <p>Improve website visibility and organic traffic.</p>
+          </div>
+        </div>
+
+        <div class="service-item animate">
+          <span class="icon-circle">
+            <i class="uil uil-megaphone"></i>
+          </span>
+          <div class="service-text">
+            <h4>Social Media Marketing</h4>
+            <p>Engage audiences and build brand awareness.</p>
+          </div>
+        </div>
+
+        <div class="service-item animate">
+          <span class="icon-circle">
+            <i class="uil uil-code-branch"></i>
+          </span>
+          <div class="service-text">
+            <h4>Web Development</h4>
+            <p>Modern, responsive, and performance-driven websites.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>  
+
+<!-- TEAM SECTION -->
+<section class="team">
+
+  <div class="team-header">
+    <span class="tag">OUR TEAM</span>
+    <h2><span>Team</span> Members</h2>
+    <p>
+      Meet our creative and professional team members
+      who build powerful digital experiences.
+    </p>
+  </div>
+
+  <div class="team-container">
+
+    <!-- CARD -->
+    <div class="team-card">
+
+      <div class="card-inner">
+
+        <!-- IMAGE -->
+        <div class="team-img">
+          <img src="./images/final_team1.webp" alt="">
+        </div>
+
+        <!-- WHITE FRONT LAYER -->
+        <div class="card-front">
+          <h3>Sony Madison</h3>
+          <span>CEO, Director</span>
+
+          <div class="social-icons">
+            <a href="404.html"><i class="uil uil-facebook-f"></i></a>
+            <a href="404.html"><i class="uil uil-twitter"></i></a>
+            <a href="404.html"><i class="uil uil-instagram"></i></a>
+          </div>
+        </div>
+
+        <!-- ORANGE BACK LAYER -->
+        <div class="card-back">
+          <p>
+            Creative leader with 10+ years of experience
+            in digital marketing strategy and branding.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+
+        <!-- CARD -->
+    <div class="team-card">
+
+      <div class="card-inner">
+
+        <!-- IMAGE -->
+        <div class="team-img">
+          <img src="./images/final_team2.webp" alt="">
+        </div>
+
+        <!-- WHITE FRONT LAYER -->
+        <div class="card-front">
+          <h3>Sony Madison</h3>
+          <span>CEO, Director</span>
+
+          <div class="social-icons">
+            <a href="404.html"><i class="uil uil-facebook-f"></i></a>
+            <a href="404.html"><i class="uil uil-twitter"></i></a>
+            <a href="404.html"><i class="uil uil-instagram"></i></a>
+          </div>
+        </div>
+
+        <!-- ORANGE BACK LAYER -->
+        <div class="card-back">
+          <p>
+            Creative leader with 10+ years of experience
+            in digital marketing strategy and branding.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+
+        <!-- CARD -->
+    <div class="team-card">
+
+      <div class="card-inner">
+
+        <!-- IMAGE -->
+        <div class="team-img">
+          <img src="./images/final_team3.webp" alt="">
+        </div>
+
+        <!-- WHITE FRONT LAYER -->
+        <div class="card-front">
+          <h3>Sony Madison</h3>
+          <span>CEO, Director</span>
+
+          <div class="social-icons">
+            <a href="404.html"><i class="uil uil-facebook-f"></i></a>
+            <a href="404.html"><i class="uil uil-twitter"></i></a>
+            <a href="404.html"><i class="uil uil-instagram"></i></a>
+          </div>
+        </div>
+
+        <!-- ORANGE BACK LAYER -->
+        <div class="card-back">
+          <p>
+            Creative leader with 10+ years of experience
+            in digital marketing strategy and branding.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+
+        <!-- CARD -->
+    <div class="team-card">
+
+      <div class="card-inner">
+
+        <!-- IMAGE -->
+        <div class="team-img">
+          <img src="./images/final_team4.webp" alt="">
+        </div>
+
+        <!-- WHITE FRONT LAYER -->
+        <div class="card-front">
+          <h3>Sony Madison</h3>
+          <span>CEO, Director</span>
+
+          <div class="social-icons">
+            <a href="404.html"><i class="uil uil-facebook-f"></i></a>
+            <a href="404.html"><i class="uil uil-twitter"></i></a>
+            <a href="404.html"><i class="uil uil-instagram"></i></a>
+          </div>
+        </div>
+
+        <!-- ORANGE BACK LAYER -->
+        <div class="card-back">
+          <p>
+            Creative leader with 10+ years of experience
+            in digital marketing strategy and branding.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+
+            <!-- CARD -->
+    <div class="team-card">
+
+      <div class="card-inner">
+
+        <!-- IMAGE -->
+        <div class="team-img">
+          <img src="./images/final_team5.webp" alt="">
+        </div>
+
+        <!-- WHITE FRONT LAYER -->
+        <div class="card-front">
+          <h3>Sony Madison</h3>
+          <span>CEO, Director</span>
+
+          <div class="social-icons">
+            <a href="404.html"><i class="uil uil-facebook-f"></i></a>
+            <a href="404.html"><i class="uil uil-twitter"></i></a>
+            <a href="404.html"><i class="uil uil-instagram"></i></a>
+          </div>
+        </div>
+
+        <!-- ORANGE BACK LAYER -->
+        <div class="card-back">
+          <p>
+            Creative leader with 10+ years of experience
+            in digital marketing strategy and branding.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+
+        <!-- CARD -->
+    <div class="team-card">
+
+      <div class="card-inner">
+
+        <!-- IMAGE -->
+        <div class="team-img">
+          <img src="./images/final_team6.webp" alt="">
+        </div>
+
+        <!-- WHITE FRONT LAYER -->
+        <div class="card-front">
+          <h3>Sony Madison</h3>
+          <span>CEO, Director</span>
+
+          <div class="social-icons">
+            <a href="404.html"><i class="uil uil-facebook-f"></i></a>
+            <a href="404.html"><i class="uil uil-twitter"></i></a>
+            <a href="404.html"><i class="uil uil-instagram"></i></a>
+          </div>
+        </div>
+
+        <!-- ORANGE BACK LAYER -->
+        <div class="card-back">
+          <p>
+            Creative leader with 10+ years of experience
+            in digital marketing strategy and branding.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!--TESTIMONAL SECTION-->
+<section class="testimonial-section">
+
+  <div class="testimonial-header">
+    <span>TESTIMONAL</span>
+    <h2>What people say</h2>
+    <p>Discover what our satisfied customers have to say
+      about their experiences with our products/services.</p>
+  </div>
+
+  <div class="testimonial-wrapper">
+
+    <!-- CARD 1 -->
+    <div class="testimonial-card">
+      <img src="./images/final_team4.webp" alt="">
+      <h4>Sarah Johnson</h4>
+      <span>Small Business Owner</span>
+      <p>Since integrating this solution into our workflow, we've experienced
+        a significant improvement in efficiency and collaboration.</p>
+    </div>
+
+    <!-- CARD 2 -->
+    <div class="testimonial-card">
+      <img src="./images/final_team5.webp" alt="">
+      <h4>David Patel</h4>
+      <span>Project Manager</span>
+      <p>I've tested numerous options in this category, but one stands out
+        for its intuitive design and comprehensive functionality.</p>
+    </div>
+
+    <!-- CARD 3 -->
+    <div class="testimonial-card">
+      <img src="./images/final_team6.webp" alt="">
+      <h4>Emily Carter</h4>
+      <span>Operations Manager</span>
+      <p>The tool we've adopted has surpassed our expectations,
+        providing valuable insights and support as our business continues to grow.</p>
+    </div>
+
+  </div>
+
+</section>
+
+<!--CONTACT SECTION-->
+<section class="contact-modern animate-flip">
+
+  <div class="contact-wrapper">
+    <div class="contact-heading animate-fade">
+  <h2>Let’s Start a <span>Conversation</span></h2>
+  <p>Tell us about your project and we’ll help turn your ideas into reality.</p>
+</div>
+
+    <!-- WHITE CARD (Back Layer) -->
+    <div class="contact-white animate-right">
+
+      <div class="contact-form">
+        <h3>Get in Touch</h3>
+        <p>Feel free to drop us a line below!</p>
+
+<form id="contactForm" novalidate>
+
+  <div class="form-group">
+    <input type="text" id="name" placeholder="Your Name">
+    <small class="error"></small>
+  </div>
+
+  <div class="form-group">
+    <input type="email" id="email" placeholder="Your Email">
+    <small class="error"></small>
+  </div>
+
+  <div class="form-group">
+    <textarea id="message" placeholder="Typing your message here..."></textarea>
+    <small class="error"></small>
+  </div>
+
+  <button type="submit">SEND</button>
+
+</form>
+      </div>
+
+    </div>
+
+    <!-- RED CARD (Front Layer) -->
+    <div class="contact-red">
+       <div class="contact-red-inner">
+      <h3>Contact Us</h3>
+
+      <div class="contact-item">
+        <i class="fa-solid fa-location-dot"></i>
+        <p>32, Avenue ve Newyork<br>321994 Newyork</p>
+      </div>
+
+      <div class="contact-item">
+        <i class="fa-solid fa-envelope"></i>
+        <p>hello@loremipsum.com</p>
+      </div>
+
+      <div class="contact-item">
+        <i class="fa-solid fa-phone"></i>
+        <p>+3356 1589 2105</p>
+      </div>
+
+      <div class="contact-item">
+        <i class="fa-solid fa-print"></i>
+        <p>+3356 1589 2100</p>
+      </div>
+    </div>
+</div>
+  </div>
+
+</section>
+
+<!--FOOTER SECTION-->
+<footer class="footer-wrapper">
+
+  <div class="footer-box">
+
+    <!-- TOP CONTENT -->
+    <div class="footer-top">
+
+      <!-- LOGO -->
+      <div class="footer-col brand">
+        <h3>STACKLY</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore eveniet est unde esse quo magni, harum aut molestiae eaque delectus.</p>
+      </div>
+
+      <!-- INFO -->
+      <div class="footer-col">
+        <h4>Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="dashboard.html">Dashboard</a></li>
+        </ul>
+      </div>
+
+      <!-- RESOURCE -->
+      <div class="footer-col">
+        <h4>Resource</h4>
+        <ul>
+          <li><a href="404.html">Blog</a></li>
+          <li><a href="404.html">Learn more</a></li>
+          <li><a href="404.html">Projects</a></li>
+          <li><a href="404.html">Designs</a></li>
+        </ul>
+      </div>
+
+      <!-- SOCIAL -->
+      <div class="footer-col">
+        <h4>Social</h4>
+        <ul>
+          <li><a href="404.html">Career</a></li>
+          <li><a href="404.html">Team</a></li>
+          <li><a href="404.html">FAQs</a></li>
+          <li><a href="404.html">Terms</a></li>
+          <li><a href="404.html">Privacy Policy</a></li>
+        </ul>
+      </div>
+
+      <!-- COMPANY -->
+<div class="footer-col contact-col">
+  <h4>Contact</h4>
+  <ul>
+    <li>
+      <i class="uil uil-phone"></i>
+      <span>+91 98765 43210</span>
+    </li>
+    <li>
+      <i class="uil uil-envelope"></i>
+      <span>info@yourcompany.com</span>
+    </li>
+    <li>
+      <i class="uil uil-map-marker"></i>
+      <span>Chennai, Tamil Nadu, India</span>
+    </li>
+  </ul>
+</div>
+
+    </div>
+
+    <!-- DIVIDER -->
+    <hr>
+
+    <!-- SOCIAL ICONS -->
+<div class="footer-social">
+  <a href="404.html"><i class="uil uil-facebook-f"></i></a>
+  <a href="404.html"><i class="uil uil-twitter"></i></a>
+  <a href="404.html"><i class="uil uil-instagram"></i></a>
+  <a href="404.html"><i class="uil uil-linkedin-alt"></i></a>
+  <a href="404.html"><i class="uil uil-google"></i></a>
+  <a href="404.html"><i class="uil uil-youtube"></i></a>
+</div>
+
+    <!-- COPYRIGHT -->
+    <p class="copyright">© Copyright. All rights reserved</p>
+
+  </div>
+
+  <!-- BOTTOM TEXT -->
+  <p class="made-by">Made with <span>❤</span> by STACKLY</p>
+
+</footer>
+
+<script src="./js/script.js"></script>
+<script>
+      const aboutSection = document.querySelector('.about-agency');
+
+  const aboutObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          aboutSection.classList.add('active');
+          aboutObserver.unobserve(aboutSection); // run once
+        }
+      });
+    },
+    {
+      threshold: 0.3
+    }
+  );
+
+  aboutObserver.observe(aboutSection);
+
+  const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if(entry.isIntersecting){
+      entry.target.classList.add("active");
+    }
+  });
+}, { threshold: 0.3 });
+
+document.querySelectorAll(
+  ".animate-flip, .animate-left, .animate-right, .animate-fade, .contact-white"
+).forEach(el => observer.observe(el));
+
+  /* OPEN LOGIN MODAL */
+function openLogin(){
+  document.getElementById("loginModal").style.display = "flex";
+}
+
+/* CLOSE LOGIN MODAL */
+function closeLogin(){
+  document.getElementById("loginModal").style.display = "none";
+}
+
+/* PASSWORD SHOW / HIDE */
+function togglePassword(){
+  const password = document.getElementById("loginPassword");
+  const eyeIcon = document.getElementById("eyeIcon");
+
+  // If eye is CLOSED → open it & show password
+  if (eyeIcon.classList.contains("fa-eye-slash")) {
+    password.type = "text";                 // show password
+    eyeIcon.classList.remove("fa-eye-slash");
+    eyeIcon.classList.add("fa-eye");
+  } 
+  // If eye is OPEN → close it & hide password
+  else {
+    password.type = "password";             // hide password
+    eyeIcon.classList.remove("fa-eye");
+    eyeIcon.classList.add("fa-eye-slash");
+  }
+}
+
+
+/* LOGIN ↔ SIGNUP TOGGLE */
+let isSignup = false;
+
+function toggleAuth(){
+  isSignup = !isSignup;
+
+document.getElementById("formTitle").innerText =
+  isSignup ? "Create Marketing Account" : "Marketing Client Login";
+
+document.getElementById("formSubtitle").innerText =
+  isSignup 
+    ? "Register your brand to manage campaigns, leads & ROI"
+    : "Access your digital marketing performance dashboard";
+
+document.getElementById("submitBtn").innerText =
+  isSignup ? "Create Account" : "Access Dashboard";
+
+document.getElementById("switchText").innerText =
+  isSignup 
+    ? "Already tracking campaigns with us?"
+    : "New to our marketing analytics platform?";
+
+document.querySelector(".switch-text a").innerText =
+  isSignup ? "Login" : "Create account";
+
+document.getElementById("companyName").style.display =
+  isSignup ? "block" : "none";
+
+document.getElementById("confirmPassword").style.display =
+  isSignup ? "block" : "none";
+}
+
+/* FORM SUBMIT → REDIRECT */
+function handleAuthSubmit(event){
+  event.preventDefault();
+  window.location.href = "404.html";
+}
+
+/* CLOSE MODAL ON OUTSIDE CLICK */
+window.addEventListener("click", function(e){
+  const modal = document.getElementById("loginModal");
+  if(e.target === modal){
+    modal.style.display = "none";
+  }
+});
+</script>
+</body>
+</html>
