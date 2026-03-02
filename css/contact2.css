@@ -604,7 +604,7 @@ padding: 15px 0;
 /* TOP GRID */
 .footer-top{
   display: grid;
-  grid-template-columns: 1.5fr repeat(4, 1fr);
+  grid-template-columns: 1.5fr repeat(5, 1fr);
   gap: 30px;
   text-align: left;
 }
@@ -709,6 +709,26 @@ color: #d82a36;
 
 .made-by span{
   color:red;
+}
+
+/* LOCATION COLUMN */
+.location-col h4{
+  margin-bottom: 12px;
+}
+
+/* MAP BOX */
+.footer-map{
+  width: 100%;
+  height: 140px;      /* short map */
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,0.15);
+}
+
+.footer-map iframe{
+  width: 100%;
+  height: 100%;
+  border: 0;
 }
 
 /* ===============================
